@@ -1,16 +1,19 @@
-# FolioForge Portfolio Builder — revised frontend MVP
+# FolioForge V3 — Motion-rich homepage
 
-## Included
-- Profession-specific themes for Web Developer, Video Editor and Digital Marketer
-- Distinct visual palettes, animated hero, hover effects, animated page transitions and scroll reveals
-- Profile image, project thumbnail and service image upload from the user's device (max 2 MB each)
-- Full-screen Preview button in the top header; preview has clickable Home, About, Work, Services and Contact views and Desktop/Mobile width controls
-- Browser-local draft autosave
-- Publish modal that checks for `POST /api/portfolios` and clearly reports when the backend is not connected
-- GitHub/Vercel-ready static files
+## What's updated
+- Distinct visual scenes for developer, video editor, and digital marketer portfolios
+- Floating CSS illustrations: laptop/code panel, film reel/timeline, analytics chart/metric cards
+- Scroll-triggered reveal animation and hero pointer parallax
+- Animated glow, orbit, pulse and hover effects
+- Responsive layout and reduced-motion accessibility support
+- Existing portfolio builder retained as `builder.html`
 
-## Deploy
-Upload `index.html`, `builder.html`, `templates.html`, and `vercel.json` to the root of a GitHub repository. Import the repository in Vercel. Use Framework Preset `Other`, leave Build Command blank, set Output Directory to `.` and deploy.
+## Deploy to GitHub + Vercel
+1. Extract this ZIP.
+2. Upload all files to the root of your GitHub repository.
+3. Import the repository in Vercel.
+4. Framework preset: `Other`; leave Build Command empty; Output Directory: `.`.
+5. Deploy.
 
-## Important: automatic publishing needs a backend
-This is still a frontend MVP. It does not yet store user accounts or portfolios centrally. Automatic URLs such as `username.yourdomain.com` require a backend API, database, image storage, routing and DNS/domain configuration. The Publish button checks `/api/portfolios`; this project intentionally does not claim a portfolio is live unless that API returns a public URL. Browser image uploads are currently stored as data URLs in localStorage; production should use object storage.
+## Note
+This package updates the frontend presentation. Public user portfolio publishing, accounts, database, persistent cloud image storage, and automatic custom-domain provisioning still require a backend and domain configuration. CSS illustrations are built into the page; no external image assets are required.
