@@ -1,28 +1,30 @@
-# FolioForge — Portfolio Builder Prototype
+# FolioForge — Portfolio Builder MVP
 
-A static, browser-only portfolio builder prototype designed to deploy on Vercel from GitHub.
+A responsive, animated, multi-page static website for Bangladeshi freelancers. Built with plain HTML, CSS and JavaScript so it can be pushed to GitHub and deployed on Vercel without a build step.
 
-## Deploy using GitHub → Vercel
+## Pages
+- `index.html` — landing page and product overview
+- `templates.html` — template library
+- `builder.html` — portfolio editor with live preview
 
-1. Create a new GitHub repository named `folioforge-portfolio-builder`.
-2. Upload `index.html`, `README.md`, and `vercel.json` to the repository root (not inside another folder).
-3. Open https://vercel.com/new and import that GitHub repository.
-4. For this static HTML project, leave the framework preset as `Other`; no build command is needed.
-5. Keep the root directory as `./` and click Deploy.
-6. Vercel will provide a live `*.vercel.app` URL. Later pushes to the connected production branch will trigger redeployment.
+## Features in this MVP
+- Three profession-specific portfolio styles: Web Developer, Video Editor and Digital Marketer
+- Live editing of profile, contact information, social links, services and project samples
+- Optional profile photo upload (2 MB limit) and project thumbnail URLs
+- Desktop/mobile preview toggle
+- Local browser draft saving with `localStorage`
+- Export a standalone portfolio HTML file
+- Responsive layouts, hover transitions, scroll reveal, loading animation and reduced-motion support
+- Free subdomain/custom domain fields as draft settings
 
-## Local preview
+## Run locally
+Open `index.html` in a browser, or use VS Code's Live Server extension.
 
-Open `index.html` directly in a browser, or use VS Code with Live Server.
+## Deploy using GitHub + Vercel
+1. Create a GitHub repository and upload all files from this folder to its root.
+2. In Vercel, choose **Add New → Project** and import the GitHub repository.
+3. Set Framework Preset to **Other**. Leave Build Command empty and Output Directory as `.`.
+4. Deploy. Future pushes to the connected production branch will trigger deployments.
 
-## Current prototype scope
-
-- Three templates: Clean, Midnight, and Warm
-- Editable profile, skills, projects, contact details, and about text
-- Profile image preview
-- Desktop/mobile preview
-- Browser-local autosave and standalone HTML export
-
-## Important limitations
-
-This is a static frontend prototype. Its data is stored in the current browser only. The Publish button does not publish each visitor's portfolio to its own public URL. User accounts, server/database storage, image hosting, automated portfolio publishing, domain verification/DNS, and a true free-subdomain allocation system require a backend and deployment integration. The Vercel deployment publishes this builder app itself, not every portfolio created inside it.
+## Important MVP limitations
+This is a front-end prototype. Drafts are saved only in the current browser; there is no account system, shared database, cloud image storage, or multi-user dashboard yet. The domain fields do not automatically provision subdomains, connect DNS or publish a user's portfolio. Exported HTML can be deployed as a static site. A production platform needs authentication, a database/storage layer, per-user public portfolio routes, and server-side/hosting API integration for automated publishing and custom domains.
